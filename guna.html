@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>show the key object</h1><br>
+    <p id="demo"></p>    
+    <p id="num"></p>    
+    <script>     
+result = 
+    {
+       "name": "joe",
+        "math": "78",
+        "english": "90",
+        "chemistry": "64",
+        "physics": "89",
+    }
+     var kei = Object.keys(result);
+     var value = Object.values(result);
+    document.getElementById("demo").innerHTML = kei;
+    document.getElementById("num").innerHTML = value;
+</script>
+</body>
+</html>
