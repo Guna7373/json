@@ -24,5 +24,56 @@ result =
     document.getElementById("demo").innerHTML = key;
     document.getElementById("num").innerHTML = value;
 </script>
+<script>
+    result = [
+        {
+           "name": "joe",
+          "marks": {
+            "math": "78",
+            "english": "90",
+            "chemistry": "64",
+            "physics": "89"
+          }
+        },
+        {
+          "name": "Mike",
+          "marks": {
+            "math": "67",
+            "english": "86",
+            "chemistry": "59",
+            "physics": "70"
+          }
+        },
+        {
+          "name": "Julia",
+          "marks": {
+            "math": "82",
+            "english": "75",
+            "chemistry": "73",
+            "physics": "84"
+          }
+        },
+        {
+          "name": "Tom",
+          "marks": {
+            "math": "76",
+            "english": "64",
+            "chemistry": "59",
+            "physics": "72"
+          }
+        },
+        {
+          "name": "Barbara",
+          "marks": {
+            "math": "90",
+            "english": "85",
+            "chemistry": "88",
+            "physics": "92"
+          }
+        }
+      ]
+      document.write(result[0]['name'] ,"<br>")
+      document.write(result[0]['marks']['math']);
+    </script>
 </body>
 </html>
