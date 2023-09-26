@@ -8,37 +8,67 @@
 <body>
     
     <h1>show the key object</h1><br>
+    <p id="demo"></p>
     <script>     
 result = 
-[
+result = [
         {
            "name": "joe",
-            "math": "78",
-            "english": "90",
-            "chemistry": "64",
-            "physics": "89"
-          },
-          {
-           "name": "jack",
+          "marks": {
             "math": "78",
             "english": "90",
             "chemistry": "64",
             "physics": "89"
           }
-
-  ]
+        },
+        {
+          "name": "Mike",
+          "marks": {
+            "math": "67",
+            "english": "86",
+            "chemistry": "59",
+            "physics": "70"
+          }
+        },
+        {
+          "name": "Julia",
+          "marks": {
+            "math": "82",
+            "english": "75",
+            "chemistry": "73",
+            "physics": "84"
+          }
+        },
+        {
+          "name": "Tom",
+          "marks": {
+            "math": "76",
+            "english": "64",
+            "chemistry": "59",
+            "physics": "72"
+          }
+        },
+        {
+          "name": "Barbara",
+          "marks": {
+            "math": "90",
+            "english": "85",
+            "chemistry": "88",
+            "physics": "92"
+          }
+        }
+      ]
   var l=result.length;
   for(i=0;i<=l-1;i++){
-        document.write(result[i].name,"<br>");
-        document.write(result[i].math,"<br>");
-        document.write(result[i].english,"<br>");
-        document.write(result[i].chemistry,"<br>");
-        document.write(result[i].physics,"<br>");  
+    document.write(result[i].name +"<br>");
+       for (var key in result[i].marks) {
+        document.write(result[i].marks[key] +"<br>");
+      }    
   }
-  // for(i=0;i<=result.length;i++){
-  //      for(j=0;j<=i;j++);
-  //      document.write()
+  //  a+="";
+  // for(let i=0;i < result.length;i++){
+  // a+=result[i]+" ";
   // }
- </script>
+    </script>
 </body>
 </html>
