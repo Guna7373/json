@@ -62,13 +62,9 @@ result = [
   for(i=0;i<=l-1;i++){
     document.write(result[i].name ,"<br>");
        for (var key in result[i].marks) {
-        document.write(result[i].marks[key] ,"<br>");
+        document.write(key,":",result[i].marks[key] ,"<br>");
       }    
   }
-  //  a+="";
-  // for(let i=0;i < result.length;i++){
-  // a+=result[i]+" ";
-  // }
     </script>
 </body>
 </html>
