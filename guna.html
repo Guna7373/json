@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h1>show the key object</h1><br>
-    <p id="demo"></p>
-    <script>     
-result = 
+  <table id="data-table" border="1">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>math</th>
+            <th>english</th>
+            <th>chemistry</th>
+            <th>physics</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+    <script>  
 result = [
-        {
+       {
            "name": "joe",
           "marks": {
             "math": "78",
@@ -58,14 +67,100 @@ result = [
           }
         }
       ]
-      
   var l=result.length;
-  for(i=0;i<=l-1;i++){
-    document.write(result[i].name ,"<br>");
+  for(i=0;i<=l;i++){
+    document.write("name",":",result[i].name ,"<br>");
        for (var key in result[i].marks) {
         document.write(key,":",result[i].marks[key] ,"<br>");
       }    
   }
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <table border="1px" >
+    <thead>
+        <tr> 
+            <th>name</th>
+            <th>math</th>
+            <th>english</th>
+            <th>chemistry</th>
+            <th>physics</th>
+        </tr>
+    </thead>
+    <tbody id="tle"></tbody>
+  </table>
+
+    <script>
+        var obj= [
+       {
+           "name": "joe",
+          "marks": {
+            "math": "78",
+            "english": "90",
+            "chemistry": "64",
+            "physics": "89"
+          }
+        },
+        {
+          "name": "Mike",
+          "marks": {
+            "math": "67",
+            "english": "86",
+            "chemistry": "59",
+            "physics": "70"
+          }
+        },
+        {
+          "name": "Julia",
+          "marks": {
+            "math": "82",
+            "english": "75",
+            "chemistry": "73",
+            "physics": "84"
+          }
+        },
+        {
+          "name": "Tom",
+          "marks": {
+            "math": "76",
+            "english": "64",
+            "chemistry": "59",
+            "physics": "72"
+          }
+        },
+        {
+          "name": "Barbara",
+          "marks": {
+            "math": "90",
+            "english": "85",
+            "chemistry": "88",
+            "physics": "92"
+          }
+        }
+      ]
+        var tbody=document.getElementById('tle')
+         var a=""
+        for(let i=0;i<obj.length;i++)
+        {
+          a+="<tr>"
+            a+="<td>"+obj[i].name+"</td>";
+            a+="<td>"+obj[i]['marks'].math+"</td>";
+            a+="<td>"+obj[i]['marks'].english+"</td>";
+            a+="<td>"+obj[i]['marks'].chemistry+"</td>";
+            a+="<td>"+obj[i]['marks'].physics+"</td>";
+          a+="</tr>"
+        }
+        tbody.innerHTML=a;
     </script>
 </body>
 </html>
