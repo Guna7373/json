@@ -94,10 +94,9 @@
         {
           a+="<tr>"
             a+="<td>"+obj[i].name+"</td>";
-            a+="<td>"+obj[i]['marks'].math+"</td>";
-            a+="<td>"+obj[i]['marks'].english+"</td>";
-            a+="<td>"+obj[i]['marks'].chemistry+"</td>";
-            a+="<td>"+obj[i]['marks'].physics+"</td>";
+            for (var key in obj[i].marks) {
+          a += "<td>"+obj[i].marks[key]+"</td>";
+        }
           a+="</tr>"
         }
         tbody.innerHTML=a;
