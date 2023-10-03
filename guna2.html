@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-</head>
+<html>
+ 
 <body>
-    
-  
+    <script>
+ const myJSON =`{
+  "result": [
+    {"name": "John","marks": {"math": "78","english": "90","chemistry": "64","physics": "89"}},
+    {"name": "Mike","marks": {"math": "67","english": "86","chemistry": "59","physics": "70"}},
+    {"name": "Julia","marks": {"math": "82","english": "75","chemistry": "73","physics": "84"}},
+    {"name": "Tom","marks": {"math": "76","english": "64","chemistry": "59","physics": "72"}},
+    {"name": "Barbara","marks": {"math": "90","english": "85","chemistry": "88","physics": "92"}}
+  ]
+}`;
+
+const data=JSON.parse(myJSON);
+x=data.result.length;
+{
+      var table = "<table border=1>";
+      table += `<tr>
+                  <th>Name</th>
+                  <th colspan="4">Marks</th>
+                </tr>`;
+      table += `<tr>
+                  <th></th>
+                  <th>Math</th>
+                  <th>English</th>
+                  <th>Chemistry</th>
+                  <th>Physics</th>
+                </tr>`;
+      var tr = "";
+      for(let i = 0; i < data.result.length; i++) {
+        tr += "<tr>";
+        tr += "<td>"+data.result[i].name+"</td>";
+        for (var key in data.result[i].marks) {
+          tr += "<td>"+data.result[i].marks[key]+"</td>";
+        }
+        tr += "</tr>"
+      }
+      table += tr + "</table>";
+      document.write(table);
+    }
+</script>
 </body>
 </html>
