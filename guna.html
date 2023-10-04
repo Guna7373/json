@@ -11,7 +11,7 @@
     <script>
         var obj= [
        {
-           "name": "joe",
+           "name": "Joe",
           "marks": {
             "math": "78",
             "english": "90",
@@ -91,7 +91,6 @@
         return 0;    
     }    
 }    
- 
 function GetSortOrderrev(prop) {    
     return function(a, b) {    
         if (a[prop] > b[prop]) {    
@@ -102,7 +101,6 @@ function GetSortOrderrev(prop) {
         return 0;    
     }    
 }    
-
 function f1() {
 obj.sort(GetSortOrder("name")); 
 var table = "<table border=1>";
